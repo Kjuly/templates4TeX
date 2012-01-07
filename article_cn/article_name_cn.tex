@@ -1,0 +1,57 @@
+%        File: article_name_cn.tex
+%     Created: Sun Jan 01 03:00 PM 2012 C
+% Last Change: Sun Jan 01 03:00 PM 2012 C
+%
+\documentclass{article}
+\usepackage{CJKutf8}
+
+% Package & settings for graphic
+\usepackage[pdftex]{graphicx}
+\usepackage{subfig} % Enable sub figure
+\graphicspath{./figure/}
+\DeclareGraphicsExtensions{.png,.jpg,.jpeg,.pdf}
+
+% Package for References & Cite
+\usepackage{natbib}
+
+\title{~标题~}
+\author{~作者~}
+
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+	% Make title
+  \maketitle
+
+	% Rename
+  \renewcommand{\abstractname}{摘要}
+	\renewcommand{\figurename}{图}
+	\renewcommand{\refname}{参考文献}
+
+	% References style & cite settings
+	\bibliographystyle{unsrtnat}
+	\setcitestyle{super, square, aysep={}, yysep={;}}
+
+	% Begin content
+  \begin{abstract}
+		~摘要内容~
+  \end{abstract}
+
+  \newpage
+  \section{引言}
+	~引言内容~
+
+
+	\section{~章节标题~}
+	~章节内容~
+
+
+	\section{结论}
+	~结论内容~
+
+
+	% Import references datas
+	\bibliography{references.bib}
+
+	\end{CJK}
+\end{document}
